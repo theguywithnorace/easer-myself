@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">EaserMyself</string>
+
+    <string name="facebook_application_id" translatable="false">310265852961381</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb310265852961381</string>
+
+    <!--  LOGIN PAGE -->
+    <string name="facebook_connect">avec facebook</string>
+    <string name="why_facebook"><u>Pourquoi seulement avec facebook ?</u></string>
+
+
+</resources>
