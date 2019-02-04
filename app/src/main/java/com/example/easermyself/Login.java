@@ -23,10 +23,5 @@ public class Login extends AppCompatActivity {
     AuthUI.IdpConfig provider = new AuthUI.IdpConfig.FacebookBuilder().build();
 
     // Create and launch sign-in intent
-    startActivityForResult(
-            AuthUI.getInstance()
-                .createSignInIntentBuilder()
-                .setAvailableProviders(providers)
-                .build(),
-    RC_SIGN_IN);
+  //
 }
