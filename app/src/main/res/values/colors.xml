@@ -3,6 +3,13 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#0e0d4b</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="grey">#84898A</color>
+    <color name="dark_grey">#6a6c71</color>
+    <color name="white_plus">#fcfcfc</color>
+    <color name="white_natural">#fafafa</color>
+
+
+
 
     <!-- LOGIN -->
     <color name="easerColor">#0e0d4b</color>

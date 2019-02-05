@@ -1,12 +1,31 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">EaserMyself</string>
 
-    <string name="facebook_application_id" translatable="false">310265852961381</string>
-    <string name="facebook_login_protocol_scheme" translatable="false">fb310265852961381</string>
 
     <!--  LOGIN PAGE -->
     <string name="facebook_connect">avec facebook</string>
     <string name="why_facebook"><u>Pourquoi seulement avec facebook ?</u></string>
+    <string name="facebook_application_id" translatable="false">310265852961381</string>
+    <string name="facebook_login_protocol_scheme" translatable="false" tools:ignore="UnusedResources">fb310265852961381</string>
 
+    <string name="error_not_connected">Vous devez vous connecter !</string>
+    <string name="error_authentication_canceled">Authentification annulée&#8230;</string>
+    <string name="error_no_internet">Aucune connexion internet !</string>
+    <string name="error_unknown_error">Une erreur inconnue s\'est produite&#8230;</string>
+    <string name="connection_succeed">Authentification réussie !</string>
+    <string name="button_login_text_logged">Afficher le profil</string>
+    <string name="button_login_text_not_logged">Connexion</string>
+
+    <!--  PHONE NUMBER ASKED -->
+    <string name="set_phone_number">Veuillez saisir votre numéro de téléphone</string>
+    <string name="ok">Valider</string>
+    <string name="phone_number">_ _ _ _ _ _ _ _ _ _ </string>
+
+
+    <!--  USER PROFILE -->
+    <string name="popup_message_confirmation_delete_account">Es-tu sûr(e) de vouloir supprimer ton compte ?</string>
+    <string name="popup_message_choice_yes">Oui !</string>
+    <string name="popup_message_choice_no">Non</string>
+    <string name="check_box_is_mentor">Etes-vous un mentor ?</string>
 
 </resources>
