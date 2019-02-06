@@ -16,14 +16,21 @@ public class UserHelper {
         return FirebaseFirestore.getInstance().collection(COLLECTION_NAME);
     }
 
-    // --- CREATE ---
+    // -------------------
+    // ----- C R U D -----
+    // -------------------
 
+    // --- CREATE ---
     public static Task<Void> createUser(String uid, String username, String urlPicture) {
+        // 1 - Create User object
         User userToCreate = new User(uid, username, urlPicture);
-        return UserHelper.getUsersCollection().document(uid).set(userToCreate);
+        // 2 - Add a new User Document to Firestore
+        return UserHelper.getUsersCollection()
+                .document(uid) // Setting uID for Document
+                .set(userToCreate); // Setting object for Document
     }
 
-    // --- GET ---
+    // --- READ --- (GET)
 
     public static Task<DocumentSnapshot> getUser(String uid){
         return UserHelper.getUsersCollection().document(uid).get();

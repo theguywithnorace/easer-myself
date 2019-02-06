@@ -5,6 +5,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
     <CheckBox
         android:id="@+id/profile_activity_check_box_is_mentor"
         android:layout_width="wrap_content"
@@ -16,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="@string/com_facebook_send_button_text"
+        android:text="username"
         android:textSize="18sp" />
 
     <!-- PROFILE EMAIL -->
@@ -34,6 +42,13 @@
         android:layout_height="30dip"
         android:layout_margin="20dp"
         android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/profile_activity_update_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Username" />
+
     <Button
         android:id="@+id/profile_activity_button_sign_out"
         android:layout_width="match_parent"
@@ -45,6 +60,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="delete" />
+
+    <Button
+        android:id="@+id/go_to_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="go to Fragment" />
+
+    <Button
+        android:id="@+id/goto_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to ViewPager" />
 
     <ImageView
         android:id="@+id/profile_activity_imageview_profile"

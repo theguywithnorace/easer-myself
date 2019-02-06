@@ -1,9 +1,9 @@
 package com.example.easermyself;
 
 import android.content.Intent;
-import android.os.Bundle;
 
 import com.example.easermyself.base.BaseActivity;
+import com.example.easermyself.dataBase.api.UserHelper;
 import com.example.easermyself.registering.PhoneNumberAsked;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
@@ -12,7 +12,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Collections;
 
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class Login extends BaseActivity {
@@ -21,12 +20,6 @@ public class Login extends BaseActivity {
 
     @Override
     public int getFragmentLayout() {return R.layout.login;}
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        ButterKnife.bind(this);
-    }
 
     @OnClick(R.id.connexionButton)
     public void OnClickConnexionButton(){
@@ -40,7 +33,6 @@ public class Login extends BaseActivity {
         super.onResume();
         if(this.isCurrentUserLogged())
             this.startUserProfileActivity();
-
     }
 
     private void startFirebaseSignInActivity() {
@@ -54,7 +46,17 @@ public class Login extends BaseActivity {
                         .build(),
                 RC_SIGN_IN);
     }
+    // 1 - Http request that create user in firestore
 
+    private void createUserInFirestore(){
+        if (this.getCurrentUser() != null){
+            String urlPicture = (this.getCurrentUser().getPhotoUrl() != null) ? this.getCurrentUser().getPhotoUrl().toString() : null;
+            String username = this.getCurrentUser().getDisplayName();
+            String uid = this.getCurrentUser().getUid();
+
+            UserHelper.createUser(uid, username, urlPicture);   //.addOnFailureListener(this.onFailureListener());
+        }
+    }
     private void startNextActivity() {
         Intent intent = new Intent(Login.this, PhoneNumberAsked.class);
         startActivity(intent);
@@ -64,6 +66,7 @@ public class Login extends BaseActivity {
         Intent intent = new Intent(Login.this, UserProfile.class);
         startActivity(intent);
     }
+
     // Result on connection
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -71,11 +74,9 @@ public class Login extends BaseActivity {
 
         if (requestCode == RC_SIGN_IN) {
             IdpResponse response = IdpResponse.fromResultIntent(data);
-
             if (resultCode == RESULT_OK) {
-                // Successfully signed in
+                this.createUserInFirestore();
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
             }
         }
     }

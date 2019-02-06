@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.easermyself.Framents.ActivityForFragment;
 import com.example.easermyself.base.BaseActivity;
 import com.example.easermyself.dataBase.api.UserHelper;
 import com.example.easermyself.dataBase.models.User;
@@ -45,6 +46,14 @@ public class UserProfile extends BaseActivity {
         this.updateUIWhenCreating();
     }
 
+    // to try fragments
+    @OnClick(R.id.go_to_fragment)
+    public void onClickGoToFragment(){
+    Intent intent = new Intent(UserProfile.this, ActivityForFragment.class);
+    startActivity(intent);
+    }
+
+    //back to the app
     @OnClick(R.id.profile_activity_check_box_is_mentor)
     public void onClickCheckboxIsMentor(){ this.updateUserIsMentor();}
 

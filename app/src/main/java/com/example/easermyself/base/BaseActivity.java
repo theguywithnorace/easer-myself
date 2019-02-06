@@ -38,7 +38,7 @@ public abstract class BaseActivity extends AppCompatActivity {
             ab.setDisplayHomeAsUpEnabled(true);
         }
     }
-    */
+*/
     // --------------------
     // ERROR HANDLER
     // --------------------

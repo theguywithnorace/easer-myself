@@ -26,6 +26,10 @@
             android:parentActivityName=".Login"/>
         <activity android:name=".UserProfile"
             android:parentActivityName=".registering.PhoneNumberAsked"/>
+        <activity android:name=".Framents.ActivityForFragment"
+            android:parentActivityName=".UserProfile"/>
+        <activity android:name=".Framents.ActivityForFragmentDetails"
+            android:parentActivityName=".Framents.ActivityForFragment"/>
     </application>
 
 </manifest>
