@@ -27,32 +27,49 @@ public class ViewPagerFragment extends Fragment {
     public static ViewPagerFragment newInstance(int position, int color) {
 
         // 2.1 Create new fragment
-        ViewPagerFragment viewPagerFragmentfrag = new ViewPagerFragment();
+        ViewPagerFragment viewPagerFragment = new ViewPagerFragment();
 
         // 2.2 Create bundle and add it some data
         Bundle args = new Bundle();
         args.putInt(KEY_POSITION, position);
         args.putInt(KEY_COLOR, color);
 
-        viewPagerFragmentfrag.setArguments(args);
+        viewPagerFragment.setArguments(args);
 
-        return(viewPagerFragmentfrag);
+        return(viewPagerFragment);
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        // 3 - Get layout of PageFragment
-        View result = inflater.inflate(R.layout.fragment_first_viewpager, container, false);
-
-        // 4 - Get widgets from layout and serialise it
-        LinearLayout rootView=  result.findViewById(R.id.linear_layout_rootview);
-        TextView textView=  result.findViewById(R.id.text_banal);
-
-        // 5 - Get data from Bundle (created in method newInstance)
         int position = getArguments().getInt(KEY_POSITION, -1);
         int color = getArguments().getInt(KEY_COLOR, -1);
+
+        View result = null;
+        LinearLayout rootView = null;
+
+        if(position<3){
+            result = inflater.inflate(R.layout.fragment_viewpager, container, false);
+             rootView=  result.findViewById(R.id.linear_layout_rootview);
+            rootView.setBackgroundColor(color);
+
+        }
+        else{
+            result = inflater.inflate(R.layout.fragment_viewpager2, container, false);
+             rootView=  result.findViewById(R.id.linearlayout);
+        }
+
+        // 3 - Get layout of PageFragment
+        //View result = inflater.inflate(R.layout.fragment_viewpager, container, false);
+
+
+        // 4 - Get widgets from layout and serialise it
+       // LinearLayout rootView=  result.findViewById(R.id.linear_layout_rootview);
+        TextView textView =  result.findViewById(R.id.text_banal);
+
+        // 5 - Get data from Bundle (created in method newInstance)
+        //int color = getArguments().getInt(KEY_COLOR, -1);
 
         // 6 - Update widgets with it
         rootView.setBackgroundColor(color);
@@ -62,5 +79,5 @@ public class ViewPagerFragment extends Fragment {
 
         return result;
     }
-
 }
+
