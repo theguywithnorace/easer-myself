@@ -16,12 +16,13 @@ public class PagerAdapter extends FragmentPagerAdapter {
     }
 
     @Override
-    public Fragment getItem(int position) {
-        return ViewPagerFragment.newInstance(position , this.colors[position]);
+    public Fragment getItem(int position) { //ici la variable position vient de la méthode getItem, de FragmentPagerAdapter itself
+        // si on a plusieurs Fragments, on peut choisir de les appeler ici en fonction de "position"
+         return ViewPagerFragment.newInstance(position , this.colors[position]);
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 }
