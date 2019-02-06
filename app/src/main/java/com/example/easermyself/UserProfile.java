@@ -15,9 +15,9 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.easermyself.Framents.ActivityForFragment;
-import com.example.easermyself.base.BaseActivity;
-import com.example.easermyself.dataBase.api.UserHelper;
-import com.example.easermyself.dataBase.models.User;
+import com.example.easermyself.Base.BaseActivity;
+import com.example.easermyself.DataBase.api.UserHelper;
+import com.example.easermyself.DataBase.models.User;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -51,6 +51,13 @@ public class UserProfile extends BaseActivity {
     public void onClickGoToFragment(){
     Intent intent = new Intent(UserProfile.this, ActivityForFragment.class);
     startActivity(intent);
+    }
+
+    // go to Viewpager
+    @OnClick(R.id.goto_view_pager)
+    public void onClickGotoViewpager(){
+        Intent intent = new Intent(UserProfile.this, BaseOfViewPager.class);
+        startActivity(intent);
     }
 
     //back to the app

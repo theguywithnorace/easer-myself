@@ -5,7 +5,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.easermyself.R;
-import com.example.easermyself.base.BaseActivity;
+import com.example.easermyself.Base.BaseActivity;
 
 public class ActivityForFragment extends BaseActivity implements MyFragment.OnButtonClickedListener {
     @Override

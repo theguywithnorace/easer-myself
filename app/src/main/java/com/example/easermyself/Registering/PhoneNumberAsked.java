@@ -1,4 +1,4 @@
-package com.example.easermyself.registering;
+package com.example.easermyself.Registering;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.example.easermyself.R;
 import com.example.easermyself.UserProfile;
-import com.example.easermyself.base.BaseActivity;
+import com.example.easermyself.Base.BaseActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 

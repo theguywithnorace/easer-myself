@@ -22,14 +22,17 @@
         </activity>
 
         <!-- Registering activity -->
-        <activity android:name=".registering.PhoneNumberAsked"
+        <activity android:name=".Registering.PhoneNumberAsked"
             android:parentActivityName=".Login"/>
         <activity android:name=".UserProfile"
-            android:parentActivityName=".registering.PhoneNumberAsked"/>
+            android:parentActivityName=".Registering.PhoneNumberAsked"/>
         <activity android:name=".Framents.ActivityForFragment"
             android:parentActivityName=".UserProfile"/>
         <activity android:name=".Framents.ActivityForFragmentDetails"
             android:parentActivityName=".Framents.ActivityForFragment"/>
+
+        <activity android:name=".BaseOfViewPager"
+            android:parentActivityName=".UserProfile"/>
     </application>
 
 </manifest>

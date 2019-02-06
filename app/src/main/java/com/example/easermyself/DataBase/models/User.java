@@ -1,4 +1,4 @@
-package com.example.easermyself.dataBase.models;
+package com.example.easermyself.DataBase.models;
 
 import android.support.annotation.Nullable;
 

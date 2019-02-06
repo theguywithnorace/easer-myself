@@ -2,9 +2,9 @@ package com.example.easermyself;
 
 import android.content.Intent;
 
-import com.example.easermyself.base.BaseActivity;
-import com.example.easermyself.dataBase.api.UserHelper;
-import com.example.easermyself.registering.PhoneNumberAsked;
+import com.example.easermyself.Base.BaseActivity;
+import com.example.easermyself.DataBase.api.UserHelper;
+import com.example.easermyself.Registering.PhoneNumberAsked;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
 import com.google.firebase.auth.FirebaseAuth;

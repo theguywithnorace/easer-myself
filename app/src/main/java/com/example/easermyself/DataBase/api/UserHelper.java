@@ -1,6 +1,6 @@
-package com.example.easermyself.dataBase.api;
+package com.example.easermyself.DataBase.api;
 
-import com.example.easermyself.dataBase.models.User;
+import com.example.easermyself.DataBase.models.User;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;

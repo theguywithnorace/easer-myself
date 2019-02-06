@@ -1,4 +1,4 @@
-package com.example.easermyself.base;
+package com.example.easermyself.Base;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
