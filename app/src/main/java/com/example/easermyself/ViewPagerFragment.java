@@ -11,9 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ViewPagerFragment extends Fragment {
 
     //Keys for our bundle
@@ -60,18 +57,9 @@ public class ViewPagerFragment extends Fragment {
              rootView=  result.findViewById(R.id.linearlayout);
         }
 
-        // 3 - Get layout of PageFragment
-        //View result = inflater.inflate(R.layout.fragment_viewpager, container, false);
 
-
-        // 4 - Get widgets from layout and serialise it
-       // LinearLayout rootView=  result.findViewById(R.id.linear_layout_rootview);
         TextView textView =  result.findViewById(R.id.text_banal);
 
-        // 5 - Get data from Bundle (created in method newInstance)
-        //int color = getArguments().getInt(KEY_COLOR, -1);
-
-        // 6 - Update widgets with it
         rootView.setBackgroundColor(color);
         textView.setText("Page numéro " + position);
 

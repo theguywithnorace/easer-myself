@@ -20,7 +20,7 @@ public class BaseOfViewPager extends BaseActivity {
 
     private void configureViewPager(){
         ViewPager pager = findViewById(R.id.viewpager);
-        pager.setAdapter(new PagerAdapter(getSupportFragmentManager(), getResources().getIntArray(R.array.colorPagesViewPager)){
+        pager.setAdapter(new PagerAdapter(getSupportFragmentManager()){
         });
     }
 }
