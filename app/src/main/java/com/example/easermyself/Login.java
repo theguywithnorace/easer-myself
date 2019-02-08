@@ -32,7 +32,7 @@ public class Login extends BaseActivity {
     public void onResume() {
         super.onResume();
         if(this.isCurrentUserLogged())
-            this.startUserProfileActivity();
+            this.startMainActivity();
     }
 
     private void startFirebaseSignInActivity() {
@@ -62,8 +62,8 @@ public class Login extends BaseActivity {
         startActivity(intent);
     }
 
-    private void startUserProfileActivity() {
-        Intent intent = new Intent(Login.this, UserProfile.class);
+    private void startMainActivity() {
+        Intent intent = new Intent(Login.this, BaseOfViewPager.class);
         startActivity(intent);
     }
 

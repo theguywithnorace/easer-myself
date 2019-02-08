@@ -15,7 +15,9 @@
     <color name="easerColor">#0e0d4b</color>
     <color name="facebookcolor">#294b9d</color>
     <color name="facebookcolorpressed">#2c3d68</color>
-    <color name="why_facebook">#64639b</color>
+    <color name="why_facebook">#D5D5EB</color>
+    <color name="why_facebook_darker">#6C6C9C</color>
+
 
     <!-- Array of colors that will be used by ViewPager as background colors -->
     <array name="colorPagesViewPager">

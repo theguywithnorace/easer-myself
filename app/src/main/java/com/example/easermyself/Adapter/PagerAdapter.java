@@ -36,4 +36,6 @@ public class PagerAdapter extends FragmentPagerAdapter {
 
         }
     }
+
+
 }

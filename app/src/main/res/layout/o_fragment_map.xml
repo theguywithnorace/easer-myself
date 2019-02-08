@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map_linear_layout"
+    android:id="@+id/contacts_linear_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/AppThemeActionBarred"
-    tools:context=".MainFragments.MapFrag">
+    android:orientation="vertical"
+    tools:context=".MainFragments.ContactsFrag">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <include
+        android:id="@+id/toolbar_map"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/map_text"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/hello_blank_fragment" />
 
 </LinearLayout>

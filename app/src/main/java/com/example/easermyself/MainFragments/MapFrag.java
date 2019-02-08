@@ -3,6 +3,8 @@ package com.example.easermyself.MainFragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +41,11 @@ public class MapFrag extends Fragment {
         int position = getArguments().getInt(KEY_POSITION, -1);
 
         View view = inflater.inflate(R.layout.o_fragment_map, container, false);
+
+//toolbar
+        Toolbar toolbar = view.findViewById(R.id.toolbar_map);
+        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+        getActivity().setTitle("Map");
 
         TextView textView = view.findViewById(R.id.map_text);
         textView.setText("Map, en Page numéro " + (position+1));

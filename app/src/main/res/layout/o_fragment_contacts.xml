@@ -4,13 +4,27 @@
     android:id="@+id/contacts_linear_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainFragments.ContactsFrag">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <include
+        android:id="@+id/toolbar_contact"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/contact_text"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/hello_blank_fragment" />
+
+    <Button
+        android:id="@+id/button_goto_user_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="goto user profile" />
 
 </LinearLayout>

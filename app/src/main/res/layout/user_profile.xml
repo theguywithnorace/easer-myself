@@ -5,13 +5,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <include
+        layout="@layout/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:layout_height="wrap_content"/>
 
     <CheckBox
         android:id="@+id/profile_activity_check_box_is_mentor"
@@ -34,7 +31,8 @@
         android:layout_height="wrap_content"
         android:paddingLeft="30dp"
         android:text="email"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:textStyle="bold|italic" />
 
     <ProgressBar
         android:id="@+id/profile_activity_progress_bar"

@@ -6,18 +6,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputEditText;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.easermyself.Framents.ActivityForFragment;
 import com.example.easermyself.Base.BaseActivity;
 import com.example.easermyself.DataBase.api.UserHelper;
 import com.example.easermyself.DataBase.models.User;
+import com.example.easermyself.Framents.ActivityForFragment;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -34,6 +38,7 @@ public class UserProfile extends BaseActivity {
     @BindView(R.id.profile_activity_text_view_email) TextView textViewEmail;
     @BindView(R.id.profile_activity_progress_bar) ProgressBar progressBar;
     @BindView(R.id.profile_activity_check_box_is_mentor) CheckBox checkBoxIsMentor;
+    @BindView(R.id.toolbar) Toolbar toolbar;
 
     // For DATA
     private static final int SIGN_OUT_TASK = 10;
@@ -43,7 +48,30 @@ public class UserProfile extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setSupportActionBar(toolbar);
+        setTitle("map");
         this.updateUIWhenCreating();
+    }
+//toolbar menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+//actions of the toolbar menu
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch(item.getItemId()){
+            case R.id.menu_first_item:
+                Toast.makeText(this, getString(R.string.tamere),Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.menu_second_item:
+                Intent intent = new Intent(UserProfile.this, BaseOfViewPager.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     // to try fragments

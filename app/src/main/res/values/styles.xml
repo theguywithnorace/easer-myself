@@ -9,4 +9,18 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!-- TOOLBAR THEME, appearance of the toolbar itself -->
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- Color of the title text in the Toolbar -->
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+    </style>
+
+    <!-- TOOLBAR TEXT THEME, appearance of the text in the toolbar-->
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">21sp</item>
+        <item name="android:fontFamily">@font/orator</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/why_facebook_darker</item>
+    </style>
+
 </resources>
