@@ -21,7 +21,7 @@ import com.bumptech.glide.Glide;
 import com.example.easermyself.Base.BaseActivity;
 import com.example.easermyself.DataBase.api.UserHelper;
 import com.example.easermyself.DataBase.models.User;
-import com.example.easermyself.Framents.ActivityForFragment;
+import com.example.easermyself.FragmentsActivity.MainActivity;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -77,7 +77,7 @@ public class UserProfile extends BaseActivity {
     // to try fragments
     @OnClick(R.id.go_to_fragment)
     public void onClickGoToFragment(){
-    Intent intent = new Intent(UserProfile.this, ActivityForFragment.class);
+    Intent intent = new Intent(UserProfile.this, MainActivity.class);
     startActivity(intent);
     }
 

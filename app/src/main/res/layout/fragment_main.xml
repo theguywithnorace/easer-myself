@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Framents.MyFragment">
+    tools:context=".fragments.MainFragment">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_fragment"
@@ -15,11 +15,11 @@
 
     <!-- TODO: Update blank fragment layout -->
     <Button
-        android:id="@+id/show_me_details"
+        android:id="@+id/fragment_main_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Show me details"
-        android:textSize="30sp"/>
+        android:textSize="30sp" />
 
 
 

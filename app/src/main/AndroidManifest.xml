@@ -25,11 +25,11 @@
         <activity android:name=".Registering.PhoneNumberAsked"
             android:parentActivityName=".Login"/>
         <activity android:name=".UserProfile"
-            android:parentActivityName=".Registering.PhoneNumberAsked"/>
-        <activity android:name=".Framents.ActivityForFragment"
+            android:parentActivityName=".BaseOfViewPager"/>
+        <activity android:name=".FragmentsActivity.MainActivity"
             android:parentActivityName=".UserProfile"/>
-        <activity android:name=".Framents.ActivityForFragmentDetails"
-            android:parentActivityName=".Framents.ActivityForFragment"/>
+        <activity android:name=".FragmentsActivity.DetailActivity"
+            android:parentActivityName=".FragmentsActivity.MainActivity"/>
 
         <activity android:name=".BaseOfViewPager"
             android:parentActivityName=".UserProfile"/>
